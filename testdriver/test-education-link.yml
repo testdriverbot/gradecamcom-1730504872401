@@ -1,0 +1,12 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Education" in the header.
+    commands:
+      - command: hover-text
+        text: Education
+        description: link in the header
+        action: click
+  - prompt: Assert that the Education page loads successfully.
+    commands:
+      - command: assert
+        expect: the Education page is displayed with relevant content
