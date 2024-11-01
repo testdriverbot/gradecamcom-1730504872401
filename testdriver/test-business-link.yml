@@ -1,0 +1,28 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Business" in the header.
+    commands:
+      - command: hover-text
+        text: Business
+        description: link in the header
+        action: click
+  - prompt: Assert that the Business page loads successfully.
+    commands:
+      - command: assert
+        expect: the page title is "Gradient for Business"
+  - prompt: Explore and interact with any business-related content.
+    commands:
+      - command: hover-text
+        text: Request a Demo
+        description: button to request a business demo
+        action: click
+  - prompt: >-
+      Assert that interactions complete without error.  # Use the content of the
+      file from the environment
+    commands:
+      - command: hover-text
+        text: Submit
+        description: button to submit the contact form
+        action: click
+      - command: assert
+        expect: a confirmation message is displayed
