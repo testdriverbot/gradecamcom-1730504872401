@@ -1,0 +1,12 @@
+version: 4.0.79
+steps:
+  - prompt: Assert that the webpage loads successfully.
+    commands:
+      - command: assert
+        expect: Get the data conversation started is visible
+  - prompt: >-
+      Assert that the company logo is visible on the homepage.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: GRADECAM is visible
