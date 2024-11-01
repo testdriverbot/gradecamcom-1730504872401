@@ -1,0 +1,38 @@
+version: 4.0.79
+steps:
+  - prompt: Navigate to any available "Services" link or section.
+    commands:
+      - command: hover-text
+        text: Services
+        description: link in the header or menu
+        action: click
+  - prompt: Navigate to any available "Services" link or section.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Menu
+        description: menu icon or text in the header
+        action: click
+      - command: scroll-until-text
+        text: Services
+        direction: down
+      - command: hover-text
+        text: Services
+        description: link in the menu
+        action: click
+  - prompt: Navigate to any available "Services" link or section.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: About
+        description: link in the header
+        action: click
+      - command: scroll-until-text
+        text: Services
+        direction: down
+      - command: hover-text
+        text: Services
+        description: link in the section
+        action: click
